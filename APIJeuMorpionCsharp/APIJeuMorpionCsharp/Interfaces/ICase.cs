@@ -8,7 +8,7 @@ namespace APIJeuMorpionCsharp.Interfaces
 {
     public interface ICase : ICloneable
     {
-        bool EstCoche();
+        bool EstOccupee();
         string GetId();
         void RecevoirElement(IElement unPion);
         Coordonnee GetCoordonnee();

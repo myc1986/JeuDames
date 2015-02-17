@@ -26,7 +26,7 @@ namespace APIJeuMorpionCsharp.Classes
             _maRepresentation = uneRepresentationCaseMorpion;
         }
 
-        public override bool EstCoche()
+        public override bool EstOccupee()
         {
             bool rep = false;
 

@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>APIJeuMorpionCsharp</RootNamespace>
     <AssemblyName>APIJeuMorpionCsharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,9 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CaseDames.cs" />
     <Compile Include="Classes\CaseMorpion.cs" />
     <Compile Include="Classes\Case.cs" />
     <Compile Include="Classes\ConfigurationPartie.cs" />
+    <Compile Include="Classes\ControlCase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\ControlCase.Designer.cs">
+      <DependentUpon>ControlCase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\ControlCaseMorpion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,6 +66,7 @@
     <Compile Include="Classes\Representation.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Enums\ECouleurCaseDames.cs" />
     <Compile Include="Formes\FormPlateau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +107,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Analyse\Diagramme de sequence Morion.sequencediagram.layout">
       <DependentUpon>Diagramme de sequence Morion.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\ControlCase.resx">
+      <DependentUpon>ControlCase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\ControlCaseMorpion.resx">
       <DependentUpon>ControlCaseMorpion.cs</DependentUpon>

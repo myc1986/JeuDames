@@ -39,7 +39,7 @@ namespace APIJeuMorpionCsharp.Classes
             foreach (ICase uneCase in _mesCases.Values)
             {
                 
-                if (!uneCase.EstCoche())
+                if (!uneCase.EstOccupee())
                 {
                     rep = false;
                 }
@@ -54,7 +54,7 @@ namespace APIJeuMorpionCsharp.Classes
 
             if (_mesCases.ContainsKey(ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)))
             {
-                if (!_mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].EstCoche())
+                if (!_mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].EstOccupee())
                 {
                     rep = true;
                 }
@@ -75,7 +75,7 @@ namespace APIJeuMorpionCsharp.Classes
         {
             if (_mesCases.ContainsKey(ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)))
             {
-                if (!_mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].EstCoche())
+                if (!_mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].EstOccupee())
                 {
                     _mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].RecevoirElement(unPion);
                 }
@@ -593,7 +593,7 @@ namespace APIJeuMorpionCsharp.Classes
         {
             if (_mesCases.ContainsKey(ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)))
             {
-                if (!_mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].EstCoche())
+                if (!_mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].EstOccupee())
                 {
                     _mesCases[ConvertIdCase(cetteCoordonnee.X, cetteCoordonnee.Y)].RecevoirElement(unPion);
                 }
