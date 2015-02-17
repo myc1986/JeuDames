@@ -11,7 +11,7 @@ namespace APIJeuMorpionCsharp.Classes
         protected IElement _value;
         protected string _id;
         protected Coordonnee _maCoordonnee;
-        protected IRepresentationCaseMorpion _maRepresentation;
+        protected IRepresentationCaseMorpion _maRepresentation; 
 
         public abstract bool EstCoche();
 
