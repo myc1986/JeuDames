@@ -51,8 +51,5 @@ namespace APIJeuMorpionCsharp.Classes
         {
             return _maCouleur;
         }
-
-
-
     }
 }
