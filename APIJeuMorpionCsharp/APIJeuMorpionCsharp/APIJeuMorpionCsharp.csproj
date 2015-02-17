@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C63C9B1-342E-47B7-AD69-EB60C095323B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APIJeuMorpionCsharp</RootNamespace>
+    <AssemblyName>APIJeuMorpionCsharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CaseMorpion.cs" />
+    <Compile Include="Classes\Case.cs" />
+    <Compile Include="Classes\ConfigurationPartie.cs" />
+    <Compile Include="Classes\ControlCaseMorpion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\ControlCaseMorpion.Designer.cs">
+      <DependentUpon>ControlCaseMorpion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Coordonnee.cs" />
+    <Compile Include="Classes\IRepresentationCaseMorpion.cs" />
+    <Compile Include="Classes\RepresentationCaseMorpion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\Representation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formes\FormPlateau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formes\FormPlateau.Designer.cs">
+      <DependentUpon>FormPlateau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formes\FrmConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formes\FrmConfiguration.Designer.cs">
+      <DependentUpon>FrmConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IRepresentation.cs" />
+    <Compile Include="Interfaces\ICase.cs" />
+    <Compile Include="Interfaces\IElement.cs" />
+    <Compile Include="Interfaces\IJoueur.cs" />
+    <Compile Include="Interfaces\ISelecteurCoordonee.cs" />
+    <Compile Include="Interfaces\ITerrainJeu.cs" />
+    <Compile Include="Globales\MethodesGlobales.cs" />
+    <Compile Include="Classes\PartieMorpion.cs" />
+    <Compile Include="Classes\Joueur.cs" />
+    <Compile Include="Classes\Pion.cs" />
+    <Compile Include="Classes\Plateau.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Analyse\Diagramme de sequence Morion.sequencediagram" />
+    <None Include="Analyse\DiagrammeJeuMorpion.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Analyse\Diagramme de sequence Morion.sequencediagram.layout">
+      <DependentUpon>Diagramme de sequence Morion.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\ControlCaseMorpion.resx">
+      <DependentUpon>ControlCaseMorpion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formes\FormPlateau.resx">
+      <DependentUpon>FormPlateau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formes\FrmConfiguration.resx">
+      <DependentUpon>FrmConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_depart.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
