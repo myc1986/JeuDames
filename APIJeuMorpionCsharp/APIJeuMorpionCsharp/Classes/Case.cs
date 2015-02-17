@@ -13,7 +13,7 @@ namespace APIJeuMorpionCsharp.Classes
         protected Coordonnee _maCoordonnee;
         protected IRepresentationCaseMorpion _maRepresentation; 
 
-        public abstract bool EstCoche();
+        public abstract bool EstOccupee();
 
         public IRepresentation GetRepresentation()
         {
