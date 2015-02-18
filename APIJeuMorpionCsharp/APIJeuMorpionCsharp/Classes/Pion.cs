@@ -6,7 +6,7 @@ using System.Text;
 
 namespace APIJeuMorpionCsharp.Classes
 {
-    public class Pion : IElement
+    public class Pion : IPion
     {
         protected string _valeur;
 

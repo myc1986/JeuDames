@@ -41,7 +41,7 @@ namespace APIJeuMorpionCsharp.Classes
             return rep;
         }
 
-        public IElement GetPion()
+        public IPion GetPion()
         {
             return _value;
         }
@@ -51,7 +51,7 @@ namespace APIJeuMorpionCsharp.Classes
             return MemberwiseClone();
         }
 
-        public override void RecevoirElement(IElement unPion)
+        public override void RecevoirElement(IPion unPion)
         {
             _value = unPion;
         }

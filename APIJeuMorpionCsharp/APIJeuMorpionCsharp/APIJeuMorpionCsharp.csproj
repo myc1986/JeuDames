@@ -79,9 +79,9 @@
     <Compile Include="Formes\FrmConfiguration.Designer.cs">
       <DependentUpon>FrmConfiguration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IPion.cs" />
     <Compile Include="Interfaces\IRepresentation.cs" />
     <Compile Include="Interfaces\ICase.cs" />
-    <Compile Include="Interfaces\IElement.cs" />
     <Compile Include="Interfaces\IJoueur.cs" />
     <Compile Include="Interfaces\ISelecteurCoordonee.cs" />
     <Compile Include="Interfaces\ITerrainJeu.cs" />

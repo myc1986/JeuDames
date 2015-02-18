@@ -11,7 +11,7 @@ namespace APIJeuMorpionCsharp.Interfaces
         bool TerrainRempli();
         bool CaseLibre(Coordonnee cetteCoordonnee);
         bool SymbolePlusRepresente();
-        void PoserElement(Coordonnee cetteCoordonnee, IElement unPion);
+        void PoserElement(Coordonnee cetteCoordonnee, IPion unPion);
         bool VerifierSiJoueurGagne(Coordonnee uneCoordonnee, Pion unPion, int nbrElementGagnantMax);
         List<ICase> GetCases();
 

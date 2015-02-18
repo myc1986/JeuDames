@@ -8,7 +8,7 @@ namespace APIJeuMorpionCsharp.Classes
 {
     public abstract class Case : ICase
     {
-        protected IElement _value;
+        protected IPion _value;
         protected string _id;
         protected Coordonnee _maCoordonnee;
         protected IRepresentationCaseMorpion _maRepresentation; 
@@ -26,7 +26,7 @@ namespace APIJeuMorpionCsharp.Classes
         }
 
 
-        public virtual void RecevoirElement(IElement unPion)
+        public virtual void RecevoirElement(IPion unPion)
         {
             _value = unPion;
         }
@@ -38,7 +38,7 @@ namespace APIJeuMorpionCsharp.Classes
 
         public abstract object Clone();
 
-        public IElement GetElement()
+        public IPion GetElement()
         {
             return _value;
         }
